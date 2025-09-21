@@ -7,6 +7,11 @@ var deleteBtn = document.getElementById("del");
 var display = document.getElementById("number-input");
 const cols = document.querySelectorAll('.col');
 
+var styleLine = document.getElementById("theme-css");
+var themeBtnBg = document.getElementById("switch-bg");
+var themeBtn1 = document.getElementById("sw-1");
+var themeBtn2 = document.getElementById("sw-2");
+
 cols.forEach((c) => {
     c.addEventListener('mousedown', function () {
         display.value += c.innerHTML;
@@ -36,3 +41,19 @@ equal.onclick = function () {
 deleteBtn.onclick = function () {
     display.value = display.value.toString().slice(0, -1);
 }
+
+themeBtn1.addEventListener("click", function () {
+    styleLine.href = "css/theme1.css";
+    themeBtnBg.classList.add("theme1-theme-select-bg");
+    themeBtnBg.classList.remove("theme2-theme-select-bg");
+    themeBtn1.style.backgroundColor = "hsl(6, 63%, 50%)";
+    themeBtn2.style.backgroundColor = "#FFB3CB00";
+});
+
+themeBtn2.addEventListener("click", function () {
+    styleLine.href = "css/theme2.css";
+    themeBtnBg.classList.add("theme2-theme-select-bg");
+    themeBtnBg.classList.remove("theme1-theme-select-bg");
+    themeBtn2.style.backgroundColor = "hsl(25, 98%, 40%)";
+    themeBtn1.style.backgroundColor = "#FFB3CB00";
+});
