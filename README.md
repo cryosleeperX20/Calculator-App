@@ -3,7 +3,9 @@
 A modern and stylish calculator built with HTML, CSS, and JavaScript.  
 It performs basic arithmetic operations and includes 3 customizable themes for a personalized look.
 
+**Live Site:** [Click Here](https://cryosleeperx20.github.io/Calculator-App/)
 ---
+
 
 ## Features
 
